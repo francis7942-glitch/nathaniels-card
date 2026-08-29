@@ -1,0 +1,6 @@
+# Static single-file site — no build step.
+# When this Netlify site's base directory is set to "francis/",
+# this publishes the folder as-is.
+[build]
+  publish = "."
+  command = ""

@@ -1,0 +1,10 @@
+# macOS / Windows cruft
+.DS_Store
+Thumbs.db
+
+# Netlify local
+.netlify/
+
+# Editor
+.vscode/
+*.swp

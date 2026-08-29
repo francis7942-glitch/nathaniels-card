@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>Francis Nathaniel Co — Contact</title>
+
+<!-- ============================================================
+     EDIT EVERYTHING HERE. Nothing else needs touching.
+     To fork for FNC / FKC / Cafe Fernando: copy this file,
+     change CONFIG + ACCENT color var, deploy to a new Netlify site.
+     ============================================================ -->
+<script>
+const CONFIG = {
+  firstName: "Francis Nathaniel",
+  lastName:  "Co",
+  title:     "Chief Operating Officer",
+  org:       "Nathaniel's Foods Corporation",
+  // Use full international format for phones so iOS/Android dial correctly.
+  phone:      "+639985339593",
+  phoneLabel: "Mobile (PH)",
+  phone2:     "+18402786392",
+  phone2Label:"Mobile (US)",
+  email:     "fnc@fkcmarketing.com",
+  website:   "https://nathaniels.com.ph",
+  location:  "San Fernando, Pampanga",
+  initials:  "FC",              // fallback if the logo image fails to load
+  // Brand logo. Place the file next to index.html (e.g. logo.png) and
+  // reference it locally — far more reliable than hotlinking the live site.
+  logoUrl:   "logo.png",
+  // Extra tappable links (label + url). Add/remove freely.
+  links: []
+};
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+<style>
+/* Geist via CDN */
+@import url('https://cdn.jsdelivr.net/npm/geist@1.3.1/dist/fonts/geist-sans/style.css');
+
+:root{
+  --paper:#f3efe3;
+  --paper-2:#e6dfcd;
+  --ink:#24302a;
+  --ink-soft:#5e6b61;
+  --line:#d4cdba;
+  --accent:#2f7d4e;          /* pandan / Nathaniel's green */
+  --accent-deep:#1d5734;
+  --card-w:380px;
+}
+
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{height:100%}
+body{
+  font-family:"Geist",-apple-system,system-ui,sans-serif;
+  background:
+    radial-gradient(120% 90% at 50% -10%, var(--paper-2) 0%, var(--paper) 55%);
+  color:var(--ink);
+  min-height:100dvh;
+  display:flex;align-items:center;justify-content:center;
+  padding:24px 18px;
+  -webkit-font-smoothing:antialiased;
+  position:relative;overflow-x:hidden;
+}
+/* film grain */
+body::after{
+  content:"";position:fixed;inset:0;pointer-events:none;opacity:.5;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.045'/%3E%3C/svg%3E");
+}
+
+.card{
+  width:100%;max-width:var(--card-w);
+  background:linear-gradient(180deg,#fbf7f0,#f3ece0);
+  border:1px solid var(--line);
+  border-radius:22px;
+  padding:40px 32px 30px;
+  box-shadow:
+    0 1px 0 rgba(255,255,255,.7) inset,
+    0 30px 60px -25px rgba(20,55,35,.42),
+    0 8px 20px -12px rgba(20,55,35,.28);
+  position:relative;z-index:1;
+}
+
+.avatar{
+  width:84px;height:84px;border-radius:50%;
+  margin:8px auto 22px;
+  display:flex;align-items:center;justify-content:center;
+  background:linear-gradient(145deg,var(--accent),var(--accent-deep));
+  color:#f6ead9;
+  font-family:"Instrument Serif",serif;font-size:34px;letter-spacing:1px;
+  box-shadow:0 10px 22px -10px rgba(20,70,40,.6), 0 0 0 6px rgba(47,125,78,.08);
+  overflow:hidden;
+}
+/* when showing the brand logo instead of initials */
+.avatar.has-logo{
+  background:linear-gradient(180deg,#fffdf8,#f1ece0);
+  padding:13px;
+}
+.avatar.has-logo img{
+  width:100%;height:100%;object-fit:contain;display:block;
+}
+
+.name{
+  font-family:"Instrument Serif",serif;
+  font-size:40px;line-height:1.02;text-align:center;
+  letter-spacing:.3px;
+}
+.title{
+  text-align:center;margin-top:10px;
+  font-size:13px;letter-spacing:.16em;text-transform:uppercase;
+  color:var(--accent-deep);font-weight:500;
+}
+.org{
+  text-align:center;margin-top:4px;
+  font-size:14px;color:var(--ink-soft);font-style:italic;
+  font-family:"Instrument Serif",serif;font-size:18px;
+}
+.loc{
+  text-align:center;margin-top:14px;font-size:12.5px;color:var(--ink-soft);
+  letter-spacing:.04em;
+}
+
+.rule{height:1px;background:var(--line);margin:24px 0 20px;border:none}
+
+.rows{display:flex;flex-direction:column;gap:2px}
+.row{
+  display:flex;align-items:center;gap:14px;
+  padding:13px 6px;border-radius:12px;
+  color:var(--ink);text-decoration:none;
+  transition:background .18s ease, transform .18s ease;
+}
+.row:active{transform:scale(.98)}
+.row:hover{background:rgba(47,125,78,.07)}
+.ic{
+  width:34px;height:34px;flex:none;border-radius:9px;
+  background:var(--paper-2);
+  display:flex;align-items:center;justify-content:center;
+  color:var(--accent-deep);
+}
+.ic svg{width:17px;height:17px}
+.row .label{font-size:11px;color:var(--ink-soft);letter-spacing:.05em;text-transform:uppercase}
+.row .val{font-size:15px;margin-top:1px;word-break:break-word}
+
+.save{
+  margin-top:26px;width:100%;border:none;cursor:pointer;
+  background:linear-gradient(180deg,var(--accent),var(--accent-deep));
+  color:#f6ead9;
+  font-family:"Geist",sans-serif;font-size:16px;font-weight:600;letter-spacing:.02em;
+  padding:17px;border-radius:14px;
+  box-shadow:0 14px 26px -12px rgba(20,70,40,.7);
+  transition:transform .15s ease, box-shadow .15s ease;
+  display:flex;align-items:center;justify-content:center;gap:10px;
+}
+.save:active{transform:translateY(1px) scale(.99);box-shadow:0 8px 16px -10px rgba(20,70,40,.7)}
+.save svg{width:19px;height:19px}
+
+.hint{
+  text-align:center;margin-top:14px;font-size:11.5px;color:var(--ink-soft);
+  letter-spacing:.03em;opacity:.8;
+}
+
+/* staggered entrance */
+.reveal{opacity:0;transform:translateY(14px);animation:rise .7s cubic-bezier(.22,.8,.3,1) forwards}
+@keyframes rise{to{opacity:1;transform:none}}
+</style>
+</head>
+<body>
+  <main class="card">
+    <div class="avatar reveal" id="avatar" style="animation-delay:.05s"></div>
+    <h1 class="name reveal" id="name" style="animation-delay:.1s"></h1>
+    <div class="title reveal" id="title" style="animation-delay:.16s"></div>
+    <div class="org reveal" id="org" style="animation-delay:.2s"></div>
+    <div class="loc reveal" id="loc" style="animation-delay:.24s"></div>
+
+    <hr class="rule reveal" style="animation-delay:.28s">
+
+    <div class="rows" id="rows"></div>
+
+    <button class="save reveal" id="save" style="animation-delay:.5s">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><line x1="19" y1="8" x2="19" y2="14"/><line x1="22" y1="11" x2="16" y2="11"/></svg>
+      Save to Contacts
+    </button>
+    <div class="hint reveal" style="animation-delay:.56s">Tap to add me to your phone</div>
+  </main>
+
+<script>
+const C = CONFIG;
+const ic = {
+  phone:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>',
+  mail:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 5L2 7"/></svg>',
+  web:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>',
+  link:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>'
+};
+
+// populate header — logo if provided, else initials (with auto-fallback)
+const avatarEl = document.getElementById('avatar');
+const fallbackInitials = C.initials || (C.firstName[0]+C.lastName[0]);
+if(C.logoUrl){
+  avatarEl.classList.add('has-logo');
+  const img = document.createElement('img');
+  img.src = C.logoUrl;
+  img.alt = C.org + ' logo';
+  img.onerror = ()=>{ avatarEl.classList.remove('has-logo'); avatarEl.textContent = fallbackInitials; };
+  avatarEl.appendChild(img);
+} else {
+  avatarEl.textContent = fallbackInitials;
+}
+document.getElementById('name').textContent = C.firstName + ' ' + C.lastName;
+document.getElementById('title').textContent = C.title;
+document.getElementById('org').textContent = C.org;
+document.getElementById('loc').textContent = C.location || '';
+document.title = C.firstName + ' ' + C.lastName + ' — Contact';
+
+// build rows
+function row(href, icon, label, val, delay){
+  return `<a class="row reveal" href="${href}" style="animation-delay:${delay}s">
+    <span class="ic">${icon}</span>
+    <span><span class="label">${label}</span><br><span class="val">${val}</span></span></a>`;
+}
+let html = '', d = .32;
+if(C.phone)  html += row('tel:'+C.phone,  ic.phone, C.phoneLabel  || 'Mobile', C.phone,  d+=.04);
+if(C.phone2) html += row('tel:'+C.phone2, ic.phone, C.phone2Label || 'Mobile', C.phone2, d+=.04);
+if(C.email) html += row('mailto:'+C.email, ic.mail, 'Email', C.email, d+=.04);
+if(C.website) html += row(C.website, ic.web, 'Website', C.website.replace(/^https?:\/\//,''), d+=.04);
+(C.links||[]).forEach(l=>{ html += row(l.url, ic.link, l.label, l.url.replace(/^https?:\/\//,''), d+=.04); });
+document.getElementById('rows').innerHTML = html;
+
+// vCard 3.0 — most compatible across iOS + Android.
+// URL on the tag points here; download generated client-side.
+function buildVCard(){
+  const lines = [
+    'BEGIN:VCARD',
+    'VERSION:3.0',
+    `N:${C.lastName};${C.firstName};;;`,
+    `FN:${C.firstName} ${C.lastName}`,
+    C.org   ? `ORG:${C.org}` : '',
+    C.title ? `TITLE:${C.title}` : '',
+    C.phone  ? `TEL;TYPE=CELL,VOICE:${C.phone}`  : '',
+    C.phone2 ? `TEL;TYPE=CELL,VOICE:${C.phone2}` : '',
+    C.email ? `EMAIL;TYPE=INTERNET,WORK:${C.email}` : '',
+    C.website ? `URL:${C.website}` : '',
+    C.location ? `ADR;TYPE=WORK:;;${C.location};;;;` : '',
+    'END:VCARD'
+  ].filter(Boolean);
+  return lines.join('\r\n');
+}
+
+document.getElementById('save').addEventListener('click', ()=>{
+  const blob = new Blob([buildVCard()], {type:'text/vcard;charset=utf-8'});
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  a.href = url;
+  a.download = `${C.firstName}_${C.lastName}.vcf`;
+  document.body.appendChild(a);
+  a.click();
+  document.body.removeChild(a);
+  setTimeout(()=>URL.revokeObjectURL(url), 1500);
+});
+</script>
+</body>
+</html>

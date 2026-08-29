@@ -1,0 +1,5 @@
+Drop a clean square PNG of the Nathaniel's dove logo in THIS folder,
+named exactly:  logo.png
+
+Until you do, the card shows the "FC" initials fallback (that's fine).
+Delete this file once the logo is in place.
